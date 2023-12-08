@@ -1,0 +1,9 @@
+08-12-2023 11:43:04.078 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2023 11:43:05.650 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2023 11:43:07.609 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+08-12-2023 11:43:07.633 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-12-2023 11:43:07.682 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+08-12-2023 11:43:07.687 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler.info - Starting...
+08-12-2023 11:43:07.687 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@10a5fd9]]
+08-12-2023 11:43:07.687 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler.info - Started.
+08-12-2023 11:43:07.711 [restartedMain] INFO  com.wipro.vamos.VamosApplication.logStarted - Started VamosApplication in 15.953 seconds (process running for 17.627)
