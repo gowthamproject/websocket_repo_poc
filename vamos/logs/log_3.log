@@ -1,22 +1,26 @@
-08-12-2023 11:42:52.454 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 8.0.1.Final
-08-12-2023 11:42:52.565 [restartedMain] INFO  com.wipro.vamos.VamosApplication.logStarting - Starting VamosApplication using Java 17.0.8.1 with PID 5432 (D:\vamos\vamos\target\classes started by Gowri in D:\vamos\vamos)
-08-12-2023 11:42:52.568 [restartedMain] INFO  com.wipro.vamos.VamosApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
-08-12-2023 11:42:52.663 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-08-12-2023 11:42:52.664 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-08-12-2023 11:42:54.374 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-08-12-2023 11:42:54.524 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 128 ms. Found 5 JPA repository interfaces.
-08-12-2023 11:42:55.906 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-08-12-2023 11:42:55.923 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-08-12-2023 11:42:55.929 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-08-12-2023 11:42:55.929 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.15]
-08-12-2023 11:42:56.094 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-08-12-2023 11:42:56.096 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3425 ms
-08-12-2023 11:42:56.432 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-08-12-2023 11:42:56.535 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.13.Final
-08-12-2023 11:42:56.542 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-08-12-2023 11:42:57.144 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-08-12-2023 11:42:57.207 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-08-12-2023 11:42:59.710 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 896f6f7e-b222-4d0a-a547-f077dc932659
-08-12-2023 11:42:59.718 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-08-12-2023 11:42:59.794 [restartedMain] WARN  org.hibernate.orm.deprecation.constructDialect - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-08-12-2023 11:43:02.239 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08-12-2023 18:56:34.276 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08-12-2023 18:56:34.286 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+08-12-2023 18:56:34.286 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 0 ms
+08-12-2023 18:56:35.311 [http-nio-8080-exec-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 746 ms
+08-12-2023 18:57:17.472 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 8.0.1.Final
+08-12-2023 18:57:17.563 [restartedMain] INFO  com.wipro.vamos.VamosApplication.logStarting - Starting VamosApplication using Java 17.0.8.1 with PID 12756 (D:\vamos\vamos\target\classes started by Gowri in D:\vamos\vamos)
+08-12-2023 18:57:17.569 [restartedMain] INFO  com.wipro.vamos.VamosApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+08-12-2023 18:57:17.659 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-12-2023 18:57:17.659 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-12-2023 18:57:19.124 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-12-2023 18:57:19.248 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 96 ms. Found 5 JPA repository interfaces.
+08-12-2023 18:57:20.591 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-12-2023 18:57:20.608 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-12-2023 18:57:20.614 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-12-2023 18:57:20.615 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.15]
+08-12-2023 18:57:20.758 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+08-12-2023 18:57:20.758 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3098 ms
+08-12-2023 18:57:21.104 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2023 18:57:21.201 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.13.Final
+08-12-2023 18:57:21.206 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
+08-12-2023 18:57:21.701 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+08-12-2023 18:57:21.764 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-12-2023 18:57:24.304 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 2aae11fe-ec38-41ba-a781-1c48806d9712
+08-12-2023 18:57:24.309 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-12-2023 18:57:24.361 [restartedMain] WARN  org.hibernate.orm.deprecation.constructDialect - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+08-12-2023 18:57:26.448 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)

@@ -1,18 +1,14 @@
 package com.wipro.vamos.websocket.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wipro.vamos.model.Throughput;
 import com.wipro.vamos.websocket.service.MessageService;
 
 @RestController
@@ -23,27 +19,35 @@ public class WebsocketController {
 	MessageService messageService;
 
 	@PostMapping("throughput")
-	public ResponseEntity<String> sendThroughput(@RequestBody List<Throughput> throughputs) {
-		messageService.processAnsSendMessage(throughputs.toString());
+	public ResponseEntity<String> sendThroughput(@RequestParam(name = "node_id") String node_id) {
+		messageService.processAndSendMessage_Throughput(node_id);
+		System.out.println("######### :-> Called");
 		return ResponseEntity.ok("Throuhput Data Send to Client");
 	}
 
+	@PostMapping("gnodeb")
+	public ResponseEntity<String> sendGnodeb(@RequestParam(name = "node_id") String node_id) {
+		messageService.processAndSendMessage_GNodeB(node_id);
+		System.out.println("######### :-> GNodeB Called");
+		return ResponseEntity.ok("GNodeB Data Send to Client");
+	}
+
 	@PostMapping("alarm")
-	public ResponseEntity<String> sendAlarm(@RequestBody List<Throughput> alarms) {
-		messageService.processAnsSendMessage(alarms.toString());
+	public ResponseEntity<String> sendAlarm(@RequestParam String node_id) {
+		messageService.processAndSendMessage_Alarm(node_id);
 		return ResponseEntity.ok("Alarm Data Send to Client");
 	}
 
 	@PostMapping("subscriber")
-	public ResponseEntity<String> sendSubscriber(@RequestBody List<Throughput> subscribers) {
-		messageService.processAnsSendMessage(subscribers.toString());
+	public ResponseEntity<String> sendSubscriber(@RequestParam String node_id) {
+		messageService.processAndSendMessage_Subscriber(node_id);
 		return ResponseEntity.ok("Subscriber Data Send to Client");
 	}
 
-	@PostMapping("gnodeb")
-	public ResponseEntity<String> sendGnodeb(@RequestBody List<Throughput> gNodeBs) {
-		messageService.processAnsSendMessage(gNodeBs.toString());
-		return ResponseEntity.ok("GNodeB Data Send to Client");
+	@PostMapping("pdusession")
+	public ResponseEntity<String> sendPDUSession(@RequestParam String node_id) {
+		messageService.processAndSendMessage_PDUSession(node_id);
+		return ResponseEntity.ok("Subscriber Data Send to Client");
 	}
 
 	@MessageMapping("/msg")
@@ -52,4 +56,5 @@ public class WebsocketController {
 	public String send(String message) throws Exception {
 		return message;
 	}
+
 }

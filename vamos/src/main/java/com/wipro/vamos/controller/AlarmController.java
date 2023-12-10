@@ -17,6 +17,7 @@ import com.wipro.vamos.exception.ResourceNotFoundException;
 import com.wipro.vamos.model.Alarm;
 import com.wipro.vamos.repository.AlarmRepository;
 import com.wipro.vamos.response.AlarmResponse;
+import com.wipro.vamos.service.AlarmService;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -25,35 +26,25 @@ public class AlarmController {
 	// LoggerFactory.getLogger(AlarmController.class);
 
 	@Autowired
-	AlarmRepository alarmRepository;
+	AlarmService alarmService;
 
 	@GetMapping(value = "/alarm/{alarm_id}", produces = { MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<Alarm> getAlarmByNodeId(@PathVariable(value = "alarm_id") long id)
+	public ResponseEntity<Alarm> getAlarmById(@PathVariable(value = "alarm_id") long id)
 			throws ResourceNotFoundException {
-		Alarm alarm = alarmRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("Alarm not found for this id :: " + id));
-		return ResponseEntity.ok().body(alarm);
+		return ResponseEntity.ok().body(alarmService.getAlarmByID(id));
 	}
 
 	@GetMapping(value = "/alarm/nodes/{node_id}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public List<Alarm> getAllAlarmByNodeId(@PathVariable(value = "node_id") String node_id)
 			throws ResourceNotFoundException {
-		return alarmRepository.findAllByNodeId(node_id);
+		return alarmService.getAlarmByNodeID(node_id);
 	}
-	
+
 	@GetMapping(value = "/alarm/count/{node_id}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public AlarmResponse getAlarmCountByNodeId(@PathVariable(value = "node_id") String node_id)
 			throws ResourceNotFoundException {
-		List<Alarm> alarms = alarmRepository.findAllByNodeId(node_id);
-		AlarmResponse alarmResponse = new AlarmResponse();
-		Map<String, Map<String, Long>> alarmCountByStatusandSeverity = new HashMap<String, Map<String,Long>>();
-		Map<String, Long> statusMap = alarms.stream()
-				.collect(Collectors.groupingBy(Alarm::getSeverity, Collectors.counting()));
-		alarmCountByStatusandSeverity.put("Open", statusMap);
-		alarmCountByStatusandSeverity.put("Closed", statusMap);
-		alarmResponse.setAlarmCountByStatusandSeverity(alarmCountByStatusandSeverity);
-		return alarmResponse;
-		
+		return alarmService.getAlarmCountByNodeId(node_id);
+
 	}
 
 }
